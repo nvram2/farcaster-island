@@ -1,24 +1,15 @@
 "use client";
 
+import { OnboardingFlow } from "../OnboardingFlow";
+
 /**
- * HomeTab component displays the main landing content for the mini app.
- * 
- * This is the default tab that users see when they first open the mini app.
- * It provides a simple welcome message and placeholder content that can be
- * customized for specific use cases.
- * 
- * @example
- * ```tsx
- * <HomeTab />
- * ```
+ * HomeTab component now renders the interactive onboarding
+ * flow that mirrors the Farcaster Island design prototype.
  */
 export function HomeTab() {
   return (
-    <div className="flex items-center justify-center h-[calc(100vh-200px)] px-6">
-      <div className="text-center w-full max-w-md mx-auto">
-        <p className="text-lg mb-2"> Getting the Farcaster Island ready!</p>
-        <p className="text-sm text-gray-500 dark:text-gray-400">by FC Island Team</p>
-      </div>
+    <div className="flex items-center justify-center px-4 py-6">
+      <OnboardingFlow />
     </div>
   );
-} 
+}
